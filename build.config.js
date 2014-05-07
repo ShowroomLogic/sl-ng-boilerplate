@@ -107,7 +107,7 @@ module.exports = {
      */
     appFiles: {
         js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
-        jsunit: [ join(buildDir, '/js/app/**/*.js'),  join(buildDir, '/js/common/**/*.js'), 'src/**/*.spec.js' ],
+        jsunit: [ join(buildDir, '/js/**/*.js'), '!'+join(buildDir, '/js/vendor/**/*.js'), 'src/**/*.spec.js' ],
 
         tpl: [ 'src/app/**/*.tpl.html', 'src/common/**/*.tpl.html' ],
 

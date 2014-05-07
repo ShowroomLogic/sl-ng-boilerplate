@@ -17,7 +17,6 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-
     ],
 
     // preprocess matching files before serving them to the browser
