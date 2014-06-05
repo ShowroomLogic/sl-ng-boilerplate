@@ -283,6 +283,13 @@ gulp.task('compile-scripts', function() {
 // Less / CSS Styles
 //---------------------------------------------
 
+gulp.task('build-css-vendor', function() {
+	if(cfg.vendorFiles.css.length) {
+		return gulp.src(cfg.vendorFiles.css, {base: cfg.vendorDir})
+			.pipe(gulp.dest(join(cfg.buildDir, cfg.cssDir, cfg.vendorDir)));
+	}
+});
+
 var styleFiles = function() { return gulp.src(cfg.appFiles.less); },
 	styleBaseTasks = lazypipe()
 					//.pipe(recess, cfg.taskOptions.recess)
@@ -296,7 +303,7 @@ var styleFiles = function() { return gulp.src(cfg.appFiles.less); },
 					.pipe(livereload(server));
 	};
 
-gulp.task('build-styles', function() {
+gulp.task('build-styles', ['build-css-vendor'], function() {
 	return buildStyles();
 });
 gulp.task('compile-styles', function() {
