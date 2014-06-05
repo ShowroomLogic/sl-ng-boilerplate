@@ -1,4 +1,6 @@
-angular.module( 'app', [])
+angular.module( 'app', [
+		'templates'	
+	])
 
 .controller( 'AppCtrl', function AppCtrl ( $scope ) {
 
