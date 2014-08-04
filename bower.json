@@ -2,6 +2,7 @@
   "name": "sl-ng-Boilerplate",
   "version": "1.0.0",
   "dependencies": {
+    "jquery": "~2.1.1",
     "angular": "~1.2.0",
     "angular-sanitize": "~1.2.0",
     "angular-bootstrap": "0.10.0",
@@ -9,12 +10,7 @@
     "angular-mocks": "~1.2.0",
     "angular-route": "~1.2.1",
     "angular-ui-router": "0.2.8-bowratic-tedium",
-    "angular-ui-utils": "~0.0.4",
     "bootstrap": "3.1.1",
-    "lodash": "~2.3.0",
-    "moment": "~2.4.0",
-    "fineuploader-s3": "4.1.1",
-    "jquery-ui": "1.10.3",
-    "bootbox": "4.0.0"
+    "lodash": "~2.3.0"
   }
 }
