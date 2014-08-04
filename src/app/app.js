@@ -1,12 +1,27 @@
 angular.module( 'app', [
-		'templates'	
-	])
+	'templates',
+	'ui.router'
+])
+
+.config(function($stateProvider, $urlRouterProvider) {
+	
+	$urlRouterProvider.otherwise("/welcome");
+	
+	$stateProvider
+		.state('welcome', {
+			url: "/welcome",
+			templateUrl: "templates/welcome.tpl.html"
+		})
+		.state('about', {
+			url: "/about",
+			templateUrl: "templates/about.tpl.html"
+		});
+	
+})
 
 .controller( 'AppCtrl', function AppCtrl ( $scope ) {
 
 	$scope.pageTitle = "sl-ng-boilerplate";
-	$scope.greeting = "Hello World!";
-	$scope.message = "If you're reading this then angular is working.  Pat yourself on the back!";
 
 })
 
